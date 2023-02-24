@@ -5,7 +5,7 @@ const get = async (req, res) => {
     try {
         const files = await fileModel.get()
         return res.status(200).json({
-            // data: files,
+            data: files,
             status: 200,
         });
 

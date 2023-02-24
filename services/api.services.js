@@ -11,18 +11,20 @@ const Api = async ({
 
     const urls = await
         params != null
-        ? `${url}${params}?token=${Token}`
-        : `${url}?token=${Token}`;
-    console.log("🚀 ~ file: api.services.js:13 ~ urls:", urls)
+        ? `${url}${params}`
+        : `${url}`;
 
-    const datas = await axios({
+
+
+
+    return datas = await axios({
         method: method,
         url: urls,
         data: body,
+        headers: { Authorization: `Bearer ${Token}` }
     });
-    console.log("🚀 ~ file: api.services.js:22 ~ datas:", datas)
 
-    return true
+
 }
 
 module.exports = {
