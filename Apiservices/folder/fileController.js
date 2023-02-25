@@ -1,9 +1,11 @@
 const fileModel = require('../folder/fileModel')
+const fileDto = require('../folder/fileDto')
 
 
 const get = async (req, res) => {
     try {
         const files = await fileModel.get()
+        const filesRow = await fileDto.format(files);
         return res.status(200).json({
             data: files,
             status: 200,
@@ -31,9 +33,17 @@ const getId = async (req, res) => {
     }
 }
 
+const post = async (req, res) => { }
+const put = async (req, res) => { }
+
+
+
 
 
 module.exports = {
     get,
-    getId
+    getId,
+    post,
+    put
+
 }

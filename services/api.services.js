@@ -11,18 +11,22 @@ const Api = async ({
 
     const urls = await
         params != null
-        ? `${url}${params}`
+        ? `${url}/${params}`
         : `${url}`;
 
 
+    try {
+        return datas = await axios({
+            method: method,
+            url: urls,
+            data: body,
+            headers: { Authorization: `Bearer ${Token}` }
+        });
 
+    } catch (error) {
+        // console.log(error.message)
+    }
 
-    return datas = await axios({
-        method: method,
-        url: urls,
-        data: body,
-        headers: { Authorization: `Bearer ${Token}` }
-    });
 
 
 }
