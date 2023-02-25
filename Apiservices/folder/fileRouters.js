@@ -8,9 +8,4 @@ router.post('/', file.post);
 router.put('/:id', file.put);
 
 
-
-// router.post('/register', function(req, res, next) {
-//   res.send('rutausuariosssss');
-// });
-
 module.exports = router;

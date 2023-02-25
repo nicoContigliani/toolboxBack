@@ -19,7 +19,14 @@ const format = async (data) => {
         const data = await callApi(element)
         if (data !== undefined) {
             const dataR = await structureValidation(data)
-            datas.push(dataR)
+            console.log("🚀 ~ file: fileDto.js:22 ~ format ~ dataR:", dataR)
+
+
+
+            datas.push({
+                file: element,
+                lines: dataR
+            })
 
         }
 

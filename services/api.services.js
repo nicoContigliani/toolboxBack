@@ -22,8 +22,7 @@ const Api = async ({
             data: body,
             headers: { Authorization: `Bearer ${Token}` }
         });
-        // console.log("🚀 ~ file: api.services.js:25 ~ urls:", urls)
-        // console.log("🚀 ~ file: api.services.js:26 ~ datas:", datas)
+
      
         return datas
     } catch (error) {

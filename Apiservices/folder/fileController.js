@@ -6,7 +6,6 @@ const get = async (req, res) => {
     try {
         const files = await fileModel.get()
         const filesRow = await fileDto.format(files);
-        // console.log("🚀 ~ file: fileController.js:9 ~ get ~ filesRow:", filesRow)
         return res.status(200).json({
             data: filesRow,
             status: 200,
@@ -22,9 +21,9 @@ const getId = async (req, res) => {
     const data = req.params;
     try {
         const files = await fileModel.getId(data)
-        // const productRow = await productDto.formatSingle(product);
+        // const filesRow = await fileDto.formatSingle(file);
         return res.status(200).json({
-            data: product,
+            data: files,
             status: 200,
         });
 
