@@ -11,6 +11,7 @@ const get = async () => {
 
     const dataReturn = await Api(todo)
     const { data } = dataReturn
+    console.log("🚀 ~ file: fileDao.js:14 ~ get ~ data:",typeof data)
 
     return data;
 }
