@@ -6,8 +6,9 @@ const get = async (req, res) => {
     try {
         const files = await fileModel.get()
         const filesRow = await fileDto.format(files);
+        // console.log("🚀 ~ file: fileController.js:9 ~ get ~ filesRow:", filesRow)
         return res.status(200).json({
-            data: files,
+            data: filesRow,
             status: 200,
         });
 

@@ -4,14 +4,34 @@ const { structureValidation } = require("../../services/struture.validation.serv
 
 const format = async (data) => {
     const { files } = data;
+    const datas = []
 
-    const dataReturn = files.forEach(async element => {
+    // const dataReturn = files.forEach(async element => {
+    //     const data = await callApi(element)
+    //     if (data !== undefined) {
+    //         const dataR = structureValidation(data)
+    //     }
+
+    // });
+
+    for (let index = 0; index < files.length; index++) {
+        const element = files[index];
         const data = await callApi(element)
         if (data !== undefined) {
-            structureValidation(data)
-        }
-    });
+            const dataR = await structureValidation(data)
+            datas.push(dataR)
 
+        }
+
+    }
+
+
+
+    // console.log("🚀 ~ file: fileDto.js:30 ~ format ~ datas:", datas)
+
+
+    // console.log("🚀 ~ file: fileDto.js:15 ~ dataReturn ~ dataReturn:", dataReturn)
+    return datas
 }
 
 
