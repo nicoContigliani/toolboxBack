@@ -21,6 +21,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.20",
+    "readme-template-generator": "^0.9.11",
     "save-dev": "^0.0.1-security",
     "supertest": "^6.3.3"
   },

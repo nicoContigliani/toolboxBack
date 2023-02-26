@@ -24,7 +24,7 @@ const structureValidation = async (data) => {
         // const element = dataAll[index];
 
 
-        if ((dataAll[index].includes('.csv')) && (typeof dataAll[index + 1] === 'string' && regexT.test(dataAll[index + 1])) && (!(regexT.test(dataAll[index + 2]))) && (dataAll[index + 3].length == 32)) {
+        if ((dataAll[index].includes('.csv')) && (typeof dataAll[index + 1] === 'string' && regexT.test(dataAll[index + 1])) && (!(regexT.test(dataAll[index + 2]))&& regexN.test(dataAll[index + 2])) && (dataAll[index + 3].length == 32)) {
 
             const file = dataAll[index]
             const text = dataAll[index + 1]
