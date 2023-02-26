@@ -18,12 +18,12 @@ const get = async (req, res) => {
 }
 
 const getId = async (req, res) => {
-    const data = req.params;
+    const filter = req.params;
     try {
-        const files = await fileModel.getId(data)
-        // const filesRow = await fileDto.formatSingle(file);
+        const files = await fileModel.getId()
+        const filesRow = await fileDto.formatFilter(files,filter);
         return res.status(200).json({
-            data: files,
+            data: filesRow,
             status: 200,
         });
 

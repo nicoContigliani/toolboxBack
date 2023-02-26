@@ -13,8 +13,19 @@ const get = async () => {
     const { data } = dataReturn
     return data;
 }
-const getId = async (data) => {
-    console.log("getId")
+const getId = async () => {
+
+    const todo = {
+        url: "https://echo-serv.tbxnet.com/v1/secret/files",
+        body: "",
+        params: "",
+        method: "get",
+        Token: "aSuperSecretKey"
+    }
+
+    const dataReturn = await Api(todo)
+    const { data } = dataReturn
+    return data;
 
 }
 
